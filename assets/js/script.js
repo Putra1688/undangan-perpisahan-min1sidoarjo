@@ -61,3 +61,37 @@ musicToggle.addEventListener('click', () => {
     void musicIcon.offsetWidth; // trigger reflow
     musicIcon.classList.add('animate-bounce');
 });
+
+// Countdown Logic
+const countdownDate = new Date("June 13, 2026 08:00:00").getTime();
+
+const countdownInterval = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+
+    const hariElement = document.getElementById("hari");
+    const jamElement = document.getElementById("jam");
+    const menitElement = document.getElementById("menit");
+    const detikElement = document.getElementById("detik");
+
+    if (!hariElement || !jamElement || !menitElement || !detikElement) return;
+
+    if (distance < 0) {
+        clearInterval(countdownInterval);
+        hariElement.innerHTML = "00";
+        jamElement.innerHTML = "00";
+        menitElement.innerHTML = "00";
+        detikElement.innerHTML = "00";
+        return;
+    }
+
+    const hari = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const jam = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const menit = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const detik = Math.floor((distance % (1000 * 60)) / 1000);
+
+    hariElement.innerHTML = hari < 10 ? "0" + hari : hari;
+    jamElement.innerHTML = jam < 10 ? "0" + jam : jam;
+    menitElement.innerHTML = menit < 10 ? "0" + menit : menit;
+    detikElement.innerHTML = detik < 10 ? "0" + detik : detik;
+}, 1000);

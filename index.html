@@ -62,8 +62,28 @@
             <h1 class="font-display text-5xl md:text-7xl font-bold mb-4 text-slate-800 drop-shadow-md">
                 MIN 1 Sidoarjo
             </h1>
-            <p class="text-slate-600 md:text-xl mb-8 font-medium">Tahun Ajaran 2025/2026</p>
+            <p class="text-slate-600 md:text-xl mb-6 font-medium">Tahun Ajaran 2025/2026</p>
             
+            <!-- Countdown on Cover -->
+            <div class="mb-8 flex flex-wrap justify-center gap-3 text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-3 min-w-[70px] shadow-sm border-2 border-white transform transition hover:scale-105">
+                    <div id="hari" class="text-2xl font-bold text-pink-500 mb-1">00</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Hari</div>
+                </div>
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-3 min-w-[70px] shadow-sm border-2 border-white transform transition hover:scale-105">
+                    <div id="jam" class="text-2xl font-bold text-yellow-500 mb-1">00</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Jam</div>
+                </div>
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-3 min-w-[70px] shadow-sm border-2 border-white transform transition hover:scale-105">
+                    <div id="menit" class="text-2xl font-bold text-green-500 mb-1">00</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Menit</div>
+                </div>
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-3 min-w-[70px] shadow-sm border-2 border-white transform transition hover:scale-105">
+                    <div id="detik" class="text-2xl font-bold text-blue-500 mb-1">00</div>
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Detik</div>
+                </div>
+            </div>
+
             <button onclick="bukaUndangan()" class="group relative px-10 py-5 bg-pastel-yellow text-slate-800 font-display font-bold text-xl rounded-full overflow-hidden shadow-[0_8px_0_#F59E0B] transition-all hover:translate-y-1 hover:shadow-[0_4px_0_#F59E0B] active:translate-y-2 active:shadow-none cursor-pointer border-2 border-white">
                 <span class="relative z-10 flex items-center gap-3">
                     <i class="fas fa-gift text-2xl"></i> Buka Undangan
