@@ -8,10 +8,10 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Fredoka & Quicksand -->
+    <!-- Google Fonts: Outfit & Quicksand -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -28,231 +28,240 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="font-sans bg-pastel-blue overflow-hidden transition-colors duration-1000 relative" id="body">
+<body class="font-sans bg-theme-bg overflow-hidden transition-colors duration-1000 relative text-theme-text" id="body">
 
     <!-- FLOATING MUSIC BUTTON -->
-    <button id="music-toggle" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-pastel-pink text-pastel-text flex items-center justify-center border-4 border-white shadow-lg transform transition-transform hover:scale-110 hover:rotate-12 hidden">
-        <i class="fas fa-music text-xl animate-bounce"></i>
+    <button id="music-toggle" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-theme-blue text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110 hidden">
+        <i class="fas fa-music text-xl"></i>
     </button>
-    <audio id="bg-music" loop src="assets/audio/prunggu33.mp3"></audio> <!-- Dummy ceria -->
+    <audio id="bg-music" loop src="assets/audio/prunggu33.mp3"></audio>
 
     <!-- 1. COVER SECTION -->
-    <section id="cover" class="fixed inset-0 z-40 flex flex-col items-center justify-center text-center p-6 bg-pastel-blue transition-all duration-1000 ease-in-out">
+    <section id="cover" class="fixed inset-0 z-40 flex flex-col items-center justify-center text-center p-6 bg-theme-bg transition-all duration-1000 ease-in-out overflow-hidden">
         
-        <!-- Animated Background Elements -->
-        <div class="absolute top-10 left-10 w-20 h-8 cloud" style="animation-duration: 25s; top: 15%;">
-            <div class="w-10 h-10 -top-5 left-2 cloud::before"></div>
-            <div class="w-12 h-12 -top-6 right-2 cloud::after"></div>
-        </div>
-        <div class="absolute top-40 left-10 w-32 h-10 cloud opacity-60" style="animation-duration: 40s; top: 60%; transform: scale(1.5);">
-            <div class="w-16 h-16 -top-8 left-4 cloud::before"></div>
-            <div class="w-20 h-20 -top-10 right-4 cloud::after"></div>
-        </div>
+        <!-- Vibrant Background Blobs -->
+        <div class="absolute top-0 -left-10 w-72 h-72 bg-theme-blue rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float"></div>
+        <div class="absolute bottom-0 -right-10 w-80 h-80 bg-theme-yellow rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-delayed"></div>
 
-        <div class="z-10 flex flex-col items-center" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="z-10 flex flex-col items-center max-w-2xl" data-aos="zoom-in" data-aos-duration="1500">
             <!-- Icon Sekolah / Logo -->
-            <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-xl border-4 border-pastel-yellow mb-6 animate-wiggle">
-                <img src="assets/images/images.png" alt="Logo Kemenag" class="w-20 h-20 object-contain">
+            <div class="w-32 h-32 bg-white rounded-3xl flex items-center justify-center shadow-lg border-4 border-theme-mint mb-8 transform rotate-3">
+                <img src="assets/images/images.png" alt="Logo Kemenag" class="w-20 h-20 object-contain -rotate-3">
             </div>
             
-            <div class="bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full mb-4 inline-block shadow-sm">
-                <p class="text-pastel-text font-bold tracking-widest text-sm uppercase">Pelepasan Siswa Kelas VI</p>
+            <div class="bg-theme-mint px-6 py-2 rounded-full mb-6 inline-block shadow-sm">
+                <p class="text-theme-dark font-bold tracking-widest text-sm uppercase">Pelepasan Siswa Kelas VI</p>
             </div>
             
-            <h1 class="font-display text-5xl md:text-7xl font-bold mb-4 text-slate-800 drop-shadow-md">
+            <h1 class="font-display text-5xl md:text-7xl font-extrabold mb-4 text-theme-dark drop-shadow-sm">
                 MIN 1 Sidoarjo
             </h1>
-            <p class="text-slate-600 md:text-xl mb-6 font-medium">Tahun Ajaran 2025/2026</p>
+            <p class="text-theme-text md:text-xl mb-10 font-semibold">Tahun Ajaran 2025/2026</p>
             
             <!-- Countdown on Cover -->
-            <div class="mb-8 flex flex-wrap justify-center gap-3 text-center" data-aos="fade-up" data-aos-delay="300">
-                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-3 min-w-[70px] shadow-sm border-2 border-white transform transition hover:scale-105">
-                    <div id="hari" class="text-2xl font-bold text-pink-500 mb-1">00</div>
-                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Hari</div>
+            <div class="mb-10 flex flex-wrap justify-center gap-4 text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white/80 backdrop-blur-md rounded-2xl p-4 min-w-[80px] shadow-sm border-2 border-white">
+                    <div id="hari" class="font-display text-3xl font-bold text-theme-pink mb-1">00</div>
+                    <div class="text-[11px] font-bold text-theme-dark uppercase tracking-widest">Hari</div>
                 </div>
-                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-3 min-w-[70px] shadow-sm border-2 border-white transform transition hover:scale-105">
-                    <div id="jam" class="text-2xl font-bold text-yellow-500 mb-1">00</div>
-                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Jam</div>
+                <div class="bg-white/80 backdrop-blur-md rounded-2xl p-4 min-w-[80px] shadow-sm border-2 border-white">
+                    <div id="jam" class="font-display text-3xl font-bold text-theme-blue mb-1">00</div>
+                    <div class="text-[11px] font-bold text-theme-dark uppercase tracking-widest">Jam</div>
                 </div>
-                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-3 min-w-[70px] shadow-sm border-2 border-white transform transition hover:scale-105">
-                    <div id="menit" class="text-2xl font-bold text-green-500 mb-1">00</div>
-                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Menit</div>
+                <div class="bg-white/80 backdrop-blur-md rounded-2xl p-4 min-w-[80px] shadow-sm border-2 border-white">
+                    <div id="menit" class="font-display text-3xl font-bold text-theme-orange mb-1">00</div>
+                    <div class="text-[11px] font-bold text-theme-dark uppercase tracking-widest">Menit</div>
                 </div>
-                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-3 min-w-[70px] shadow-sm border-2 border-white transform transition hover:scale-105">
-                    <div id="detik" class="text-2xl font-bold text-blue-500 mb-1">00</div>
-                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Detik</div>
+                <div class="bg-white/80 backdrop-blur-md rounded-2xl p-4 min-w-[80px] shadow-sm border-2 border-white">
+                    <div id="detik" class="font-display text-3xl font-bold text-theme-purple mb-1">00</div>
+                    <div class="text-[11px] font-bold text-theme-dark uppercase tracking-widest">Detik</div>
                 </div>
             </div>
 
-            <button onclick="bukaUndangan()" class="group relative px-10 py-5 bg-pastel-yellow text-slate-800 font-display font-bold text-xl rounded-full overflow-hidden shadow-[0_8px_0_#F59E0B] transition-all hover:translate-y-1 hover:shadow-[0_4px_0_#F59E0B] active:translate-y-2 active:shadow-none cursor-pointer border-2 border-white">
-                <span class="relative z-10 flex items-center gap-3">
-                    <i class="fas fa-gift text-2xl"></i> Buka Undangan
+            <button onclick="bukaUndangan()" class="group px-10 py-4 bg-theme-dark text-white font-display font-bold tracking-wide text-lg rounded-full shadow-[0_6px_0_#0F172A] transition-all hover:translate-y-1 hover:shadow-[0_2px_0_#0F172A] active:translate-y-2 active:shadow-none focus:outline-none">
+                <span class="flex items-center gap-3">
+                    <i class="fas fa-envelope-open text-xl text-theme-yellow"></i> Buka Undangan
                 </span>
             </button>
-        </div>
-        
-        <!-- Decorative bottom wave for cover -->
-        <div class="absolute bottom-0 w-full overflow-hidden leading-none">
-            <svg class="relative block w-[calc(100%+1.3px)] h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.85,131.7,201.3,126.9,242.44,124.1,283.05,110.15,321.39,56.44Z" fill="#ffffff"></path>
-            </svg>
         </div>
     </section>
 
     <!-- KONTEN UTAMA -->
-    <main id="konten-utama" class="hidden opacity-0 transition-opacity duration-1000 ease-in-out relative z-10 bg-white">
+    <main id="konten-utama" class="hidden opacity-0 transition-opacity duration-1000 ease-in-out relative z-10 bg-theme-bg">
         
-        <!-- 2. HERO INTRO -->
-        <section class="min-h-[80vh] relative flex items-center justify-center py-20 px-6 bg-white overflow-hidden">
-            <!-- Decorative Blobs -->
-            <div class="absolute top-10 -left-10 w-40 h-40 bg-pastel-pink rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-float"></div>
-            <div class="absolute bottom-10 -right-10 w-56 h-56 bg-pastel-yellow rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-float-delayed"></div>
+        
 
-            <div class="max-w-5xl mx-auto text-center relative z-10" data-aos="zoom-in-up">
-                <div class="inline-flex justify-center items-center gap-2 mb-6">
-                    <i class="fas fa-star text-pastel-yellow text-3xl animate-spin-slow"></i>
-                    <i class="fas fa-star text-pastel-blue text-4xl animate-bounce"></i>
-                    <i class="fas fa-star text-pastel-pink text-3xl animate-spin-slow"></i>
-                </div>
+        <!-- 2. HERO INTRO -->
+        <section class="relative flex items-center justify-center py-20 px-6 overflow-hidden bg-white">
+            <!-- Decorative Blobs -->
+            <div class="absolute top-20 right-10 w-48 h-48 bg-theme-pink rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-float"></div>
+            
+            <div class="max-w-4xl mx-auto text-center relative z-10" data-aos="fade-up">
                 
-                <h2 class="font-display text-4xl md:text-6xl font-bold mb-8 text-slate-800 leading-tight">
-                    Terbang Meraih <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400">Cita-Cita Bersama!</span>
+                <h2 class="font-display text-4xl md:text-6xl font-extrabold mb-8 text-theme-dark leading-tight">
+                    Melangkah Meraih <br>
+                    <span class="text-theme-blue">Cita-Cita Bersama</span>
                 </h2>
                 
-                <p class="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed bg-white/50 backdrop-blur-sm p-6 rounded-3xl border-2 border-dashed border-pastel-blue">
-                    Enam tahun penuh tawa, canda, dan cerita indah di sekolah tercinta. Kini saatnya anak-anak hebat kita melangkah ke jenjang selanjutnya, membawa bekal ilmu dan akhlak mulia dari MIN 1 Sidoarjo.
-                </p>
+                <div class="bg-theme-bg p-8 rounded-[2rem] shadow-sm border-2 border-white inline-block max-w-3xl transform transition hover:-translate-y-1">
+                    <p class="text-theme-text text-lg md:text-xl font-medium leading-relaxed">
+                        <span class="font-bold block mb-4 text-theme-dark">Assalamu’alaikum Wr. Wb.</span>
+                        Dengan hormat, sehubungan dengan telah berakhirnya Tahun Ajaran 2025/2026, kami selaku keluarga besar Madrasah Ibtidaiyah Negeri 1 Sidoarjo bermaksud menyelenggarakan acara <strong>"Penyerahan Kembali Peserta Didik Madrasah Ibtidaiyah Negeri 1 Sidoarjo"</strong> Kelas VI Tahun Ajaran 2025/2026.
+                    </p>
+                </div>
                 
-                <div class="mt-10 flex justify-center">
-                    <img src="https://api.dicebear.com/7.x/fun-emoji/svg?seed=Kids&radius=50&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf" alt="Kids" class="w-32 h-32 shadow-lg rounded-full border-4 border-white animate-wiggle">
+                <div class="mt-12 flex justify-center">
+                    <div class="w-32 h-32 rounded-[2rem] bg-theme-yellow shadow-lg border-4 border-white transform rotate-6 flex items-center justify-center overflow-hidden transition-transform hover:scale-110">
+                         <img src="assets/images/images.png" alt="Graduation" class="w-full h-full object-cover -rotate-6">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SCROLLING MARQUEE ANIMATION -->
+        <div class="w-full bg-theme-yellow py-4 overflow-hidden border-y-4 border-white shadow-md z-20 whitespace-nowrap">
+            <div class="inline-block animate-marquee">
+                <span class="text-theme-dark font-display font-bold text-2xl mx-8">✨ Selamat Datang di Acara Pelepasan Siswa Kelas VI ✨</span>
+                <span class="text-theme-dark font-display font-bold text-2xl mx-8">🌟 MIN 1 Sidoarjo Tahun Ajaran 2025/2026 🌟</span>
+                <span class="text-theme-dark font-display font-bold text-2xl mx-8">✨ Terus Melangkah Meraih Cita-Cita ✨</span>
+                <!-- duplicate -->
+                <span class="text-theme-dark font-display font-bold text-2xl mx-8">✨ Selamat Datang di Acara Pelepasan Siswa Kelas VI ✨</span>
+                <span class="text-theme-dark font-display font-bold text-2xl mx-8">🌟 MIN 1 Sidoarjo Tahun Ajaran 2025/2026 🌟</span>
+                <span class="text-theme-dark font-display font-bold text-2xl mx-8">✨ Terus Melangkah Meraih Cita-Cita ✨</span>
+            </div>
+        </div>
+
+        <!-- Wave Divider -->
+        <div class="w-full overflow-hidden leading-none bg-white">
+            <svg class="relative block w-full h-[80px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.85,131.7,201.3,126.9,242.44,124.1,283.05,110.15,321.39,56.44Z" fill="#86EFAC"></path>
+            </svg>
+        </div>
+
+        <!-- 3. DETAIL ACARA -->
+        <section class="py-24 bg-theme-mint relative">
+            <div class="max-w-4xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <div class="inline-block bg-white px-6 py-2 rounded-full shadow-sm mb-4 border border-theme-dark/10">
+                        <p class="text-theme-dark font-bold tracking-[0.15em] text-sm uppercase">Informasi Acara</p>
+                    </div>
+                    <h2 class="font-display text-4xl md:text-5xl font-extrabold text-theme-dark mb-6">
+                        Pelaksanaan Pelepasan
+                    </h2>
+                    <p class="text-theme-text text-lg md:text-xl max-w-2xl mx-auto font-medium">
+                        Berkenaan dengan hal tersebut, kami sangat mengharapkan kehadiran Bapak/Ibu Wali Murid beserta Ananda pada acara tersebut yang akan dilaksanakan pada:
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Card Waktu -->
+                    <div class="bg-white p-10 rounded-[2.5rem] text-center shadow-lg border-4 border-white transition duration-300 hover:-translate-y-2 animate-float" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-20 h-20 mx-auto bg-theme-yellow rounded-2xl flex items-center justify-center mb-6 text-theme-dark transform -rotate-3">
+                            <i class="far fa-calendar-alt text-4xl"></i>
+                        </div>
+                        <h3 class="font-display text-3xl font-bold mb-4 text-theme-dark">Waktu</h3>
+                        <p class="text-theme-text font-bold text-xl mb-2">Sabtu, 13 Juni 2026</p>
+                        <p class="text-theme-text font-medium bg-theme-bg py-2 px-6 rounded-full inline-block">Pukul 08.00 - Selesai</p>
+                    </div>
+                    
+                    <!-- Card Tempat -->
+                    <div class="bg-white p-10 rounded-[2.5rem] text-center shadow-lg border-4 border-white transition duration-300 hover:-translate-y-2 animate-float-delayed" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-20 h-20 mx-auto bg-theme-pink rounded-2xl flex items-center justify-center mb-6 text-theme-dark transform rotate-3">
+                            <i class="fas fa-map-marker-alt text-4xl"></i>
+                        </div>
+                        <h3 class="font-display text-3xl font-bold mb-4 text-theme-dark">Tempat</h3>
+                        <p class="text-theme-text font-bold text-xl mb-2">Halaman MIN 1 Sidoarjo</p>
+                        <p class="text-theme-text font-medium bg-theme-bg py-2 px-6 rounded-full inline-block text-sm">Jl. Balai Desa BanjarKemantren</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Wave Divider -->
-        <div class="w-full overflow-hidden leading-none bg-pastel-green">
-            <svg class="relative block w-full h-[100px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#ffffff" opacity=".25"></path>
-                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="#ffffff" opacity=".5"></path>
-                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#ffffff"></path>
-            </svg>
-        </div>
-
-        <!-- 3. DETAIL ACARA (TEMA AWAN & ALAM) -->
-        <section class="py-20 bg-pastel-green relative">
-            <div class="max-w-5xl mx-auto px-6 relative z-10">
-                <div class="text-center mb-16" data-aos="zoom-in">
-                    <h2 class="font-display text-4xl font-bold text-slate-800 mb-4 inline-block bg-white px-8 py-3 rounded-full shadow-md border-4 border-white transform -rotate-2">
-                        Kapan Acaranya?
-                    </h2>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                    <!-- Card Waktu -->
-                    <div class="bg-white p-8 rounded-[3rem] text-center shadow-xl border-8 border-pastel-yellow transform transition duration-500 hover:scale-105" data-aos="fade-right">
-                        <div class="w-24 h-24 mx-auto bg-pastel-yellow rounded-full flex items-center justify-center text-4xl mb-6 shadow-inner animate-bounce-slow">
-                            <i class="far fa-calendar-check text-orange-500"></i>
-                        </div>
-                        <h3 class="font-display text-3xl font-bold mb-2 text-slate-700">Waktu</h3>
-                        <p class="text-orange-500 font-bold text-xl mb-2">Sabtu, 13 Juni 2026</p>
-                        <p class="text-slate-500 font-medium bg-slate-100 py-2 px-4 rounded-full inline-block">Pukul 08.00 - Selesai</p>
-                    </div>
-                    
-                    <!-- Card Tempat -->
-                    <div class="bg-white p-8 rounded-[3rem] text-center shadow-xl border-8 border-pastel-pink transform transition duration-500 hover:scale-105" data-aos="fade-left">
-                        <div class="w-24 h-24 mx-auto bg-pastel-pink rounded-full flex items-center justify-center text-4xl mb-6 shadow-inner animate-bounce-slow" style="animation-delay: 1s;">
-                            <i class="fas fa-map-marked-alt text-pink-500"></i>
-                        </div>
-                        <h3 class="font-display text-3xl font-bold mb-2 text-slate-700">Tempat</h3>
-                        <p class="text-pink-500 font-bold text-xl mb-2">Halaman MIN 1 Sidoarjo</p>
-                        <p class="text-slate-500 font-medium bg-slate-100 py-2 px-4 rounded-full inline-block">Jl. Balai Desa BanjarKemantren</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Wave Divider 2 -->
-        <div class="w-full overflow-hidden leading-none bg-pastel-orange">
-            <svg class="relative block w-full h-[100px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.85,131.7,201.3,126.9,242.44,124.1,283.05,110.15,321.39,56.44Z" fill="#A7F3D0"></path>
+        <div class="w-full overflow-hidden leading-none bg-theme-bg">
+            <svg class="relative block w-full h-[80px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#86EFAC"></path>
             </svg>
         </div>
 
         <!-- 4. GALERI / ALBUM KELAS -->
-        <section class="py-20 px-6 bg-pastel-orange relative">
+        <section class="py-24 px-6 bg-theme-bg relative">
             <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16" data-aos="zoom-in">
-                    <h2 class="font-display text-4xl font-bold text-slate-800 mb-4 inline-block bg-white px-8 py-3 rounded-full shadow-md border-4 border-white transform rotate-2">
-                        Album Kenangan <i class="fas fa-camera-retro text-orange-400"></i>
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="font-display text-4xl md:text-5xl font-extrabold text-theme-dark mb-4">
+                        Kenangan Manis
                     </h2>
+                    <p class="text-theme-text font-medium text-lg">Momen berharga yang tak akan terlupakan</p>
                 </div>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Foto 1: Unsplash API untuk foto anak-anak riang -->
-                    <div class="group relative rounded-[2rem] overflow-hidden bg-white p-4 shadow-xl transform transition-transform hover:-translate-y-4 hover:rotate-2" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="rounded-3xl overflow-hidden h-64 border-4 border-pastel-yellow">
-                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Anak Bermain" class="w-full h-full object-cover">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="group relative bg-theme-yellow p-3 rounded-[2rem] shadow-md transform transition hover:-translate-y-2 hover:rotate-1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="aspect-video rounded-3xl overflow-hidden">
+                            <img src="assets/images/img1.jpeg" alt="Momen" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         </div>
-                        <h3 class="text-center font-display text-xl mt-4 text-slate-700">Pentas Seni</h3>
                     </div>
                     
-                    <!-- Foto 2 -->
-                    <div class="group relative rounded-[2rem] overflow-hidden bg-white p-4 shadow-xl transform transition-transform hover:-translate-y-4 hover:-rotate-2" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="rounded-3xl overflow-hidden h-64 border-4 border-pastel-blue">
-                            <img src="https://images.unsplash.com/photo-1602052577122-f73b9710adba?auto=format&fit=crop&w=800&q=80" alt="Belajar" class="w-full h-full object-cover">
+                    <div class="group relative bg-theme-purple p-3 rounded-[2rem] shadow-md transform transition hover:-translate-y-2 hover:-rotate-1" data-aos="fade-up" data-aos-delay="200">
+                        <div class="aspect-video rounded-3xl overflow-hidden">
+                            <img src="assets/images/img2.jpeg" alt="Belajar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         </div>
-                        <h3 class="text-center font-display text-xl mt-4 text-slate-700">Keseruan Kelas</h3>
                     </div>
                     
-                    <!-- Foto 3 -->
-                    <div class="group relative rounded-[2rem] overflow-hidden bg-white p-4 shadow-xl transform transition-transform hover:-translate-y-4 hover:rotate-2" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="rounded-3xl overflow-hidden h-64 border-4 border-pastel-pink">
-                            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80" alt="Buku" class="w-full h-full object-cover">
+                    <div class="group relative bg-theme-orange p-3 rounded-[2rem] shadow-md transform transition hover:-translate-y-2 hover:rotate-1" data-aos="fade-up" data-aos-delay="300">
+                        <div class="aspect-video rounded-3xl overflow-hidden">
+                            <img src="assets/images/img3.jpeg" alt="Buku" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                         </div>
-                        <h3 class="text-center font-display text-xl mt-4 text-slate-700">Masa Belajar</h3>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Wave Divider 3 -->
-        <div class="w-full overflow-hidden leading-none bg-pastel-blueDark">
+        <!-- Wave Divider -->
+        <div class="w-full overflow-hidden leading-none bg-theme-dark">
             <svg class="relative block w-full h-[80px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#FED7AA"></path>
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#F8FAFC"></path>
             </svg>
         </div>
 
-        <!-- 5. KOTAK PESAN -->
-        <section class="py-20 bg-pastel-blueDark relative">
-            <div class="max-w-3xl mx-auto px-6 relative z-10">
-                <div class="bg-white rounded-[3rem] p-8 md:p-12 shadow-2xl border-8 border-pastel-blue" data-aos="flip-up">
-                    <div class="text-center mb-8 flex flex-col items-center">
-                        <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Mailbox&backgroundColor=b6e3f4" alt="Mailbox" class="w-20 h-20 bg-pastel-blue rounded-full mb-4 shadow-inner">
-                        <h2 class="font-display text-3xl font-bold text-slate-800">Tinggalkan Pesan Manis!</h2>
-                        <p class="text-slate-500 font-medium">Doa dari ayah/bunda sangat berarti buat kami.</p>
+        <!-- 5. LOKASI & PENUTUP -->
+        <section class="py-24 bg-theme-dark relative text-white">
+            <div class="max-w-4xl mx-auto px-6 relative z-10">
+                
+                <!-- Peta Lokasi -->
+                <div class="bg-theme-bg p-3 rounded-[2.5rem] shadow-2xl border-4 border-theme-mint mb-20 transform transition hover:-translate-y-2" data-aos="fade-up">
+                    <div class="w-full h-80 rounded-[2rem] overflow-hidden relative">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.326300188047!2d112.7238210143224!3d-7.429074075245892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e42d7be877f1%3A0xf6a7e02e86ef5a6c!2sMIN%201%20Sidoarjo!5e0!3m2!1sen!2sid!4v1685794829399!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    
-                    <form class="space-y-6">
-                        <div>
-                            <input type="text" placeholder="Nama Bunda/Ayah / Siswa" class="w-full bg-slate-50 border-4 border-pastel-blue rounded-2xl px-6 py-4 text-slate-700 font-bold focus:outline-none focus:border-pastel-pink transition-colors">
-                        </div>
-                        <div>
-                            <textarea placeholder="Tuliskan harapan dan doa..." rows="4" class="w-full bg-slate-50 border-4 border-pastel-blue rounded-2xl px-6 py-4 text-slate-700 font-bold focus:outline-none focus:border-pastel-pink transition-colors resize-none"></textarea>
-                        </div>
-                        <button type="button" class="w-full bg-pastel-pink text-slate-800 font-display font-bold text-xl py-4 rounded-2xl shadow-[0_6px_0_#F472B6] transition-all hover:translate-y-1 hover:shadow-[0_2px_0_#F472B6] active:translate-y-2 active:shadow-none border-2 border-white cursor-pointer">
-                            Kirim Pesan <i class="fas fa-paper-plane ml-2"></i>
-                        </button>
-                    </form>
+                    <div class="text-center mt-6 mb-3">
+                        <a href="https://maps.app.goo.gl/M4rC1DWhzQyF8V2e6" target="_blank" class="inline-block bg-theme-dark text-white font-bold py-4 px-10 rounded-full shadow-[0_6px_0_#0F172A] hover:translate-y-1 hover:shadow-[0_2px_0_#0F172A] active:translate-y-2 active:shadow-none transition-all">
+                            <i class="fas fa-map-marker-alt mr-3 text-theme-yellow text-xl"></i> Buka Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Penutup Surat -->
+                <div class="text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-24 h-24 bg-theme-yellow rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner text-theme-dark">
+                        <i class="fas fa-praying-hands text-4xl"></i>
+                    </div>
+                    <p class="text-white text-lg md:text-xl font-medium leading-relaxed mb-6">
+                        Demikian surat undangan ini kami sampaikan. Mengingat pentingnya acara ini, kehadiran dan dukungan Bapak/Ibu Wali Murid sangat kami harapkan.
+                    </p>
+                    <p class="text-white text-lg md:text-xl font-medium leading-relaxed mb-10">
+                        Atas perhatian dan kehadiran Bapak/Ibu, kami ucapkan terima kasih.
+                    </p>
+                    <h3 class="font-display text-4xl md:text-5xl font-bold text-theme-mint">Wassalamu’alaikum Wr. Wb.</h3>
                 </div>
             </div>
         </section>
 
         <!-- FOOTER -->
-        <footer class="py-12 bg-white text-center border-t-8 border-pastel-blue relative z-10">
-            <img src="assets/images/images.png" alt="Logo Kemenag" class="w-12 mx-auto mb-4 grayscale hover:grayscale-0 transition-all duration-300">
-            <p class="font-display text-slate-800 font-bold text-xl">Terima Kasih, MIN 1 Sidoarjo</p>
-            <p class="text-slate-500 font-medium mt-2">Dibuat dengan <i class="fas fa-heart text-pink-500 animate-pulse"></i> untuk kenangan terindah.</p>
+        <footer class="py-16 bg-theme-bg text-center relative z-10">
+            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto shadow-sm mb-6 border border-theme-dark/10">
+                <img src="assets/images/images.png" alt="Logo Kemenag" class="w-10 h-10 object-contain">
+            </div>
+            <p class="font-display text-theme-dark font-bold text-2xl mb-2">MIN 1 Sidoarjo</p>
+            <p class="text-theme-text font-medium text-sm tracking-widest uppercase">Terima Kasih</p>
         </footer>
 
     </main>

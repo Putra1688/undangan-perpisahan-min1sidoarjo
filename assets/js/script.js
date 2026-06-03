@@ -30,6 +30,7 @@ function bukaUndangan() {
     setTimeout(() => {
         konten.classList.remove('opacity-0');
         document.getElementById('body').classList.remove('overflow-hidden');
+        AOS.refresh();
     }, 50);
 
     // Tampilkan tombol musik
