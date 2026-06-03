@@ -1,0 +1,29 @@
+body { color: #334155; }
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: #BAE6FD; }
+::-webkit-scrollbar-thumb { background: #FBCFE8; border-radius: 6px; border: 3px solid #BAE6FD; }
+::-webkit-scrollbar-thumb:hover { background: #F472B6; }
+
+.card-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+}
+
+/* Floating Clouds Background */
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+    opacity: 0.8;
+    animation: moveClouds linear infinite;
+}
+.cloud::before, .cloud::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+@keyframes moveClouds {
+    from { transform: translateX(-10vw); }
+    to { transform: translateX(110vw); }
+}
